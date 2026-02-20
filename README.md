@@ -1,16 +1,35 @@
-# React + Vite
+MovieMood 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieMood is a modern web application where users can search for movies, explore details, and find download options. Built with React and Vite, MovieMood delivers a fast and seamless movie browsing experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Search movies by title
+- 🎥 Browse popular and trending movies
+- ⭐ View detailed movie information (plot, cast, ratings, release date)
+- 📱 Fully responsive design for mobile and desktop
+- 💾 Download options with multiple quality selections
+- 🎭 Filter movies by genres
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React + Vite
+- **API**: The Movie Database (TMDb) API
+- **Styling**: CSS3
+- **Icons**: Lucide React
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Project Structure
+moviemood/
+├── src/
+│   ├── components/     # React components
+│   ├── App.jsx        # Main app component
+│   └── main.jsx       # Entry point
+├── public/            # Static assets
+└── README.md
+
+
+Author
+Nayah75
+License
+This project is open source and available under the MIT License.
