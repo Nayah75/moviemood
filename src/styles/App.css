@@ -79,3 +79,34 @@ body {
 .btn-secondary:hover {
   background-color: #0b5ed7;
 }
+
+/* Section styles */
+main {
+  min-height: calc(100vh - 200px);
+  padding-bottom: var(--spacing-xl);
+}
+
+.section-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
