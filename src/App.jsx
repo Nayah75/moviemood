@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar'
 import GenreFilter from './components/GenreFilter'
 import MovieGrid from './components/MovieGrid'
 import { tmdbApi } from './services/tmdbApi'
+import MovieDetails from './components/MovieDetails'
 import './styles/App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [searchMode, setSearchMode] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
 // Fetch popular movies on initial load
   useEffect(() => {
@@ -55,9 +57,12 @@ function App() {
   };
 
   const handleMovieClick = (movie) => {
-    console.log('Movie clicked:', movie);
-    alert(`You clicked: ${movie.title}`);
-  };
+    setSelectedMovie(movie);
+};
+
+  const handleCloseDetails = () => {
+    setSelectedMovie(null);
+};
 
   const getSectionTitle = () => {
     if (searchMode) return 'Search Results';
@@ -90,6 +95,10 @@ function App() {
           )}
         </div>
       </main>
+      
+      {selectedMovie && (
+        <MovieDetails movie={selectedMovie} onClose={handleCloseDetails} />
+    )}
     </div>
   )
 }
