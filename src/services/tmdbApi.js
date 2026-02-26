@@ -36,5 +36,29 @@ export const tmdbApi = {
       console.error('Error fetching movie details:', error);
       return null;
     }
+  },
+
+// Fetch movies by genre
+  getMoviesByGenre: async (genreId) => {
+    try {
+      const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&sort_by=popularity.desc`);
+      const data = await response.json();
+      return data.results;
+    } catch (error) {
+      console.error('Error fetching movies by genre:', error);
+      return [];
+    }
+  },
+
+  // Fetch trending movies
+  getTrendingMovies: async () => {
+    try {
+      const response = await fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
+      const data = await response.json();
+      return data.results;
+    } catch (error) {
+      console.error('Error fetching trending movies:', error);
+      return [];
+    }
   }
 };

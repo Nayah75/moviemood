@@ -1,0 +1,42 @@
+.genre-filter {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+}
+
+.genre-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--card-bg);
+  color: var(--text-secondary);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.genre-btn:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.genre-btn.active {
+  background-color: var(--primary-red);
+  color: var(--text-primary);
+  border-color: var(--primary-red);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .genre-filter {
+    gap: 0.5rem;
+  }
+  
+  .genre-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
